@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zadaca 6.6.23</title>   
+    <link href="bootstrap.css" rel="stylesheet">
+    <script src="jquery3.6.4.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+  <body>
+
+    <!-- table -->
+    <table id="table" class="table  table table-bordered table-condensed ">
+        <thead class="table-success">
+          <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Jmbg</th>
+            <th>Email</th>
+            <th>Obrisi</th>
+          </tr>
+        </thead>
+      </table>
+       <!-- BTN koje poziva modal -->
+<button type="button" class="btn btn-success btnDodaj" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Dodaj osobu
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="staticBackdropLabel"><b>Obrazac</b></h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <!-- Kotakt forma -->
+            <h1>Vasi podaci</h1>
+            <form id="kontaktForma" name="kForma" method="dialog"  class="modal-label">
+                <p>
+                  <label for="ime">Ime</label>
+                  <input id="ime" placeholder="Ime" class="modal-form" name="ime">
+                </p>
+                <p>
+                    <label for="prezime">Prezime </label>
+                    <input id="prezime" class="modal-form" placeholder="Prezime" name="prezime">
+                  </p>
+              <p>
+                  <label for="jmbg">Jmbg </label>
+                  <input id="jmbg" placeholder="JMBG" class="modal-form" name="jmbg">
+                </p>
+                <p>
+                  <label for="email">E-Mail </label>
+                  <input id="email" placeholder="Email" class="modal-form" name="email">
+                </p>           
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" value="btn-modal" id="btn-modal" class="btn btn-success">Dodaj</button>
+                </div>
+            </form>
+      </div>
+    </div>
+  </div>
+    <script src="bootstrap.js"></script>
+    <script src="jqueryValidation.js"></script>
+        <script src="main.js"></script>
+  </body>
+</html>
